@@ -4,13 +4,20 @@
 
 <div style="width: 45%; display: inline-block; text-align: center">
 	<%= @player_1_name %> has <%= @player_1_hit_points %> points <br>
-	<a href="/attack?target=player_2">ATTACK!!! <%= @player_2_name %></a>
+	<form method="post" action="/attack">
+    <input type="text" name="target" value="player_2" hidden>
+    <input type="submit" value="ATTACK!!! <%= @player_2_name %>" <%= @disable_player1 %> >
+  </form>
 </div>
 
 <div style="width: 45%; display: inline-block; text-align: center">
 	<%= @player_2_name %> has <%= @player_2_hit_points %> points <br>
-	<a href="/attack?target=player_1">ATTACK!!! <%= @player_1_name %></a>
+  <form method="post" action="/attack">
+    <input type="text" name="target" value="player_1" hidden>
+    <input type="submit" value="ATTACK!!! <%= @player_1_name %>" <%= @disable_player2 %> >
+  </form>
 </div>
 
 <div>
+It's player <%= @current_player %> turn
 </div>
