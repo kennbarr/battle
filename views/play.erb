@@ -1,11 +1,16 @@
-<div>
+<h1 style="text-align: center">
 	<%= @player_1_name %> vs <%= @player_2_name %>
+</h1>
+
+<div style="width: 45%; display: inline-block; text-align: center">
+	<%= @player_1_name %> has <%= @player_1_hit_points %> points <br>
+	<a href="/attack?target=player_2">ATTACK!!! <%= @player_2_name %></a>
+</div>
+
+<div style="width: 45%; display: inline-block; text-align: center">
+	<%= @player_2_name %> has <%= @player_2_hit_points %> points <br>
+	<a href="/attack?target=player_1">ATTACK!!! <%= @player_1_name %></a>
 </div>
 
 <div>
-	<%= @player_2_name %> has 50 points, <%= @player_1_name %> has 50 points
-</div>
-
-<div>
-	<a href="/attack">ATTACK!!!</a>
 </div>
