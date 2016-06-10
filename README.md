@@ -24,3 +24,12 @@
 
 ```
 =================
+
+How to play
+---------
+Enter two player names for a 2 player game or just one name to play against the computer
+![login screen](http://www.kennethbarrett.com//makers/battle/login.png)
+
+---------
+Choose attacks to battle against your opponent
+![battle screen](http://www.kennethbarrett.com//makers/battle/game.png)
