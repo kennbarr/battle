@@ -13,6 +13,14 @@ class Game
     switch_turn
 	end
 
+  def self.create(player_1, player_2)
+    @game = new(player_1, player_2)
+  end
+
+  def self.game
+    @game
+  end
+
   def switch_turn
     if @current_player == @player1
       @current_player = @player2

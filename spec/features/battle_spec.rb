@@ -14,3 +14,14 @@ feature "viewing players hit points" do
   end
 end
 
+feature "lose screen shows if player loses" do
+  scenario "player 2 at 0 hp" do
+    sign_in_and_play
+    4.times do
+      click_button "ATTACK!!! name2"
+      click_button "ATTACK!!! name1"
+    end
+    click_button "ATTACK!!! name2"
+    expect(page).to have_content "name2 loses!"
+  end
+end

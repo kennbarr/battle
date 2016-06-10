@@ -1,7 +1,9 @@
 <h1 style="text-align: center">
 	<%= @player_1_name %> vs <%= @player_2_name %>
 </h1>
-
+<div style="text-align: center">
+It's player <%= @current_player %> turn
+</div>
 <div style="width: 45%; display: inline-block; text-align: center">
 	<%= @player_1_name %> has <%= @player_1_hit_points %> points <br>
 	<form method="post" action="/attack">
@@ -16,8 +18,10 @@
     <input type="text" name="target" value="player_1" hidden>
     <input type="submit" value="ATTACK!!! <%= @player_1_name %>" <%= @disable_player2 %> >
   </form>
-</div>
 
-<div>
-It's player <%= @current_player %> turn
+	<% if @player_1_hit_points == 0 %>
+		<%= @player_1_name %> loses!
+	<% elsif @player_2_hit_points == 0 %>
+		<%= @player_2_name %> loses!
+	<% end %>
 </div>
